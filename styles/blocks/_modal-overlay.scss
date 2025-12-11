@@ -1,0 +1,90 @@
+
+.modal-overlay {
+  display: none; /* Скрыто по умолчанию */
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Затемнение фона */
+
+  @include mobile-above {
+    width: 100%;
+  }
+}
+.modal-content {
+  @include fluid-width(562, 324);
+  background-color: #fefefe;
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+  margin-left: auto;
+  position: relative;
+  right: 0;
+
+  @include mobile-above {
+    height: 100%;
+  }
+}
+.close-btn {
+  color: var(--color-dark-but-bg);
+  font-size: 28px;
+  top: 0;
+  float: right;
+  cursor: pointer;
+  position: relative;
+  @include reset-button
+}
+.close-btn:hover,
+.close-btn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-overlay__title{
+    margin: 12px 0 24px;
+    color: #000;
+    font-size: 24px ;
+    font-weight: 600;
+  }
+.search-input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 15px;
+  
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.city-drop-down__list {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 16px;
+}
+.city-drop-down__item {
+  padding: 10px 0;
+  cursor: pointer;
+  
+  color: var(--color-dark-title);
+}
+.city-drop-down__item:hover {
+  background-color: #f1f1f1;
+}
+
+#openModalBtn {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+.city-drop-down__dropped {
+  display: none;
+}
+
+.city-drop-down__dropped.active {
+  display: block;
+}
+
+.item_hide {
+  display: none;
+}

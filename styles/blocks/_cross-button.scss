@@ -1,0 +1,14 @@
+.cross-button{
+  @include reset-button;
+  @include square(46px);
+  background-color: var(--color-dark-but-bg);
+  font-size: larger;
+  position: relative;
+  border-radius: 50%;
+
+  @include hover{
+    background-color: var(--color-gray-text);
+  }
+
+ 
+}

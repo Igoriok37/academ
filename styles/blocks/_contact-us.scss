@@ -1,0 +1,57 @@
+.contact-us {
+  position: relative;
+
+  @include mobile-m-above {
+    justify-self: center;
+    width: 668px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+
+    @include desktop-above {
+      row-gap: 10px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+
+    @include desktop-above {
+      row-gap: 10px;
+    }
+  }
+
+  &__button {
+    max-width: 668px;
+    width: 100%;
+    height: 66px;
+    border-radius: var(--border-radius-xxs);
+    border: none;
+    background-color: var(--color-dark-but-bg);
+    color:var(--color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+
+    &:hover {
+      color: #adb6fe;
+    }
+  }
+
+  &__description {
+    font-size: 13px;
+    line-height: 1.36;
+    letter-spacing: -0.02em;
+    color:var(--color-gray-text);
+    max-width: 336px;
+
+    @include mobile-s-above {
+      max-width: none;
+    }
+  }
+}

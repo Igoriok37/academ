@@ -1,0 +1,20 @@
+.logo {
+display: flex;
+align-items: center;
+column-gap: 10px;
+transition: all .3s ease;
+
+  &:hover {
+    color:  #adb6fe;
+  }
+
+  &__description {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.06;
+    letter-spacing: -.02em;
+    max-width: 116px;
+
+
+  }
+}

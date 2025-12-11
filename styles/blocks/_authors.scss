@@ -1,0 +1,107 @@
+.authors {
+  padding: 8vw 3.75vw 5.72vw;
+  overflow: hidden;
+
+  &__title {
+    @include fluid-text(88,44);
+
+    font-weight: 600;
+    
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #08304c;
+    margin-bottom: 6.77vw;
+  }
+
+  &__slider {
+    @include fluid-width(740, 365);
+    height: 100%;
+    overflow: visible;
+    margin: 0;
+  }
+
+  &__list {
+    display: flex;
+    column-gap: 75px;
+  }
+}
+
+
+
+.fancybox-content {
+  background: none;
+  max-width: 774px;
+  width: 100%;
+  box-shadow: 0 37px 81px 0 rgba(0, 0, 0, 0.1), 0 147px 147px 0 rgba(0, 0, 0, 0.09), 0 331px 199px 0 rgba(0, 0, 0, 0.05), 0 589px 235px 0 rgba(0, 0, 0, 0.01), 1px 920px 250px 0 rgba(0, 0, 0, 0), 0 22px 59px 0 rgba(0, 0, 0, 0.11);
+  padding: 0;
+  border-radius: 24px;
+}
+
+.fancybox-bg {
+  background: none !important;
+  
+}
+
+.fancybox-inner  {
+
+  backdrop-filter: blur(7px) !important;
+}
+
+
+
+.fancybox-navigation .fancybox-button--arrow_left div,
+.fancybox-navigation .fancybox-button--arrow_right div {
+  background-color: var(--color-blue) !important;
+  box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.42);
+
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  position: relative;
+}
+
+.fancybox-navigation .fancybox-button--arrow_left {
+  display: none;
+
+  @include desktop-above {
+    display: block;
+    left: 0%;
+  }
+  @include desktop-l-above {
+    left: 16%;
+  }
+}
+
+.fancybox-navigation .fancybox-button--arrow_right {
+  display: none;
+
+  @include desktop-above {
+    display: block;
+    right: 7%;
+  }
+  @include desktop-l-above {
+    right: 22%;
+  }
+}
+
+.fancybox-button {
+  background: transparent;
+}
+
+.fancybox-navigation .fancybox-button--arrow_left svg,
+.fancybox-navigation .fancybox-button--arrow_right svg{
+  width: 24px;
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  height: 44px;
+}
+
+.fancybox-navigation .fancybox-button--arrow_right svg {
+  left: 35%;
+}
+
+.fancybox-content .fancybox-close-small {
+  opacity: 1 !important;
+}

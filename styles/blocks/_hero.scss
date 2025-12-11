@@ -1,0 +1,179 @@
+.hero {
+  background:var(--bg-lg-bg);
+  box-sizing: content-box;
+  color: var(--color-light);
+  min-height: 866px;
+  position: relative;
+  z-index: 0;
+
+  &__rect {
+    position: absolute;
+    top: 5%;
+    right: 0;
+    z-index: -2;
+
+    @include desktop-l-above {
+      top: 25%;
+      left: 0;
+    }
+  }
+
+  &__bac {
+    position:absolute;
+    bottom: 0;
+    left: 10vw; 
+    z-index: -2;
+
+    @include desktop-l-above {
+      left: auto;
+      right: 0;
+    }
+  }
+
+
+  &__hend {
+    position: absolute;
+    top: 27%;
+    right: 185px;
+    z-index: 1;
+    cursor: pointer;
+    transition:all  1s ease;
+  }
+
+  &__decor1 {
+    position: absolute;
+    top: -2%;
+    right: 0;
+    z-index: -1;
+    cursor: pointer;
+    
+
+    @include mobile-xs-above {
+      top: 8%;
+    }
+
+    @include desktop-l-above {
+      max-width: 345px;
+      width: 100%;
+      top: 8%;
+      z-index: 1;
+    }
+  }
+
+  &__decor1:hover ~ &__hend {
+    transform: rotate(-90deg);
+    transform-origin: 51px 111px;
+  }
+
+  &__decor2 {
+    @include fluid-width(480, 240);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__decor3 {
+    position: absolute;
+    top: 90%;
+    right: 0;
+    z-index: -1;
+
+    @include mobile-s-above {
+      top: 100%;
+      right: 0%;
+    }
+
+    @include mobile-above {
+      right: -6%;
+    }
+  }
+
+  &__decor4 {
+    @include desktop-l-above{
+      position: absolute;
+      z-index: -1;
+      top: 92%; 
+      right: -32%;
+    }
+  }
+  
+  &__decor5 {
+    @include desktop-l-above {
+      position: absolute;
+      z-index: -1;
+      top: 13%; 
+      right: -51%;
+    }
+  }
+
+  &__team {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    column-gap: 16px;
+
+    &-list {
+      display: flex;
+
+      li {
+        margin-left: -20px;
+        transition: all  .3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  &__title {
+    @include fluid-text(100, 50);
+   
+
+    font-weight: 600;
+    line-height: 0.94;
+    letter-spacing: -0.03em;
+    margin-bottom: 22px;
+
+    @include mobile-m-above {
+      justify-self: center;
+      text-align: center;
+    }
+
+    span {
+      position: relative;
+
+      &::before {
+        @include fluid-width(540, 280);
+        @include fluid-height(101, 61);
+        position: absolute;
+        content: '';
+        background-color: var(--color-blue-dark);
+        top: 20%;
+        left: -1%;
+        transform: rotate(-1deg);
+        z-index: -1;
+      }
+    }
+  }
+
+  &__description {
+    line-height: 1.4;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    max-width: 339px;
+    @include fluid-text (24, 16);
+
+    @include mobile-m-above {
+      max-width: 668px;
+      text-align: center;
+      justify-self: center;
+    }
+
+    @include desktop-above {
+      max-width:813px;
+    }
+
+  }
+}

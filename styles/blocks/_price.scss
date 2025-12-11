@@ -1,0 +1,40 @@
+.price {
+  background-color: var(--color-light);
+  padding: 60px 9px 70px;
+  margin-inline: -9px;
+    
+  @include mobile-above {
+    margin: 12px 14px 16px;
+    border-radius: 36px;
+  }
+
+  &__inner {
+    @include mobile-s-above {
+      width: 90%;
+      margin-inline: auto;
+    }
+  }
+
+  &__title {
+    @include fluid-text(88,44);
+
+    font-weight: 600;
+    line-height: 0.95;
+    color: var(--color-dark-title);
+    margin-bottom: 36px;
+
+    @include mobile-above {
+      max-width: 1215px;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 3.2vw;
+    }
+  }
+}
+
+
+
+
+
+
+

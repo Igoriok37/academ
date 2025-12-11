@@ -1,0 +1,144 @@
+.card {
+  @include fluid-text(20,14);
+  padding: 22px 16px;
+  background-color: var(--color-light);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.54;
+  letter-spacing: -0.01em;
+
+    @include mobile-above {
+      padding: 36px 28px;
+      border-radius: 24px;
+      font-size: 20px;
+    }
+
+  &--shadow {
+    box-shadow: 0 37px 81px 0 rgba(0, 0, 0, 0.1), 0 147px 147px 0 rgba(0, 0, 0, 0.09), 0 331px 199px 0 rgba(0, 0, 0, 0.05), 0 589px 235px 0 rgba(0, 0, 0, 0.01), 1px 920px 250px 0 rgba(0, 0, 0, 0), 0 22px 59px 0 rgba(0, 0, 0, 0.11);
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    @include mobile-above {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    &-top {
+      display: flex;
+      column-gap: 16px;
+    }
+
+    &-box {
+      display: flex;
+      flex-direction: column;
+      row-gap: 4px;
+      font-weight: 500;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+
+    &-title {
+      @include fluid-text(25, 18);
+    }
+
+    &-abbr {
+      @include fluid-text(15, 13);
+
+      color: var(--color-gray-text);
+    }
+
+    &-image {
+      width: 50px;
+      height: 50px;
+
+      @include mobile-above {
+        width:71px;
+        height: 71px;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+    
+
+    
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+    }
+
+    &-achievements {
+      @include fluid-text(20,14)
+    }
+
+    &-item span {
+      height: 24px;
+    }
+  }
+
+  &__right {
+    display: inline-flex;
+    column-gap: 22px;
+    height: fit-content;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: -4px;
+
+  
+
+
+    &-item {
+      @include fluid-text(34, 14);
+      display: flex;
+      align-items: center;
+      column-gap: 2px;
+      line-height: 1;
+
+      @include mobile-above {
+        column-gap: 12px;
+        align-items: start;
+      }
+
+      svg {
+        @include fluid-width(28, 20);
+        @include fluid-height(28, 20);
+      }
+    }
+  }
+
+  &__body {
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 4px;
+    }
+
+    &-item {
+      @include fluid-text(20,12);
+      padding: 10px 8px;
+      border: 1px solid #d9d9d9;
+      border-radius: 100px;
+      
+
+      @include mobile-above {
+        padding: 11px 20px;
+        
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.sliders {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  width: 100%;
+
+  @include mobile-above {
+    max-width: 384px;
+  }
+}
+
+.slider {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &-label {
+    font-size: 15px;
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    color: #b3b3b3;
+  }
+
+  &-input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 18px;
+    width: 100%;
+  }
+
+  &-input {
+    width: 100%;
+    background-color: var(--color-gray-bg-text);
+    height: 63px;
+  }
+
+  &-value {
+    min-width: 83px;
+    height: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+}
+
+
+/* Base slider styling for consistency across browsers */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 7px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, #4d4dff 0%, #15a7f5 100%);
+  /* Initial gradient is set via JS for dynamic range fill */
+}
+
+/* Customizing the slider thumb (handle) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-image: url(../../images/price/circle.svg);
+  background-repeat: no-repeat;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  transform: scale(1.1);
+}
+
+

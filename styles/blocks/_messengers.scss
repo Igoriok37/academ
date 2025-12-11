@@ -1,0 +1,48 @@
+.messengers {
+  display: flex;
+  column-gap: 8px;
+
+  &__link {
+    background-color: var(--color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    
+
+   
+
+    @include mobile-above {
+      width: 40px;
+      height: 40px;
+    }
+
+    svg {
+      @include mobile-above {
+        width: 20px;height: 20px;
+      }
+
+      path {
+        @include mobile-above {
+          fill: var(--color-blue-alt);
+        }
+      }
+    }
+  }
+
+  &__link:hover {
+    svg {
+      path {
+        fill: #adb6fe;
+        transition: all .3s ease;
+
+        @include mobile-above {
+          fill: #000000;
+          transition: all .3s ease;
+        }
+      }
+    }
+  }
+}

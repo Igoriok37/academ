@@ -1,0 +1,24 @@
+.field {
+  position: relative;
+  
+  &__label {
+    position: absolute;
+    top: 5%;
+    left:4%;
+    line-height: 1.4;
+    color: #b3b3b3;
+    letter-spacing: -0.02em;
+  }
+
+  &__input {
+    max-width: 668px;
+    width: 100%;
+    height: 72px;
+    border-radius: var(--border-radius-s);
+    border: none;
+    padding: 15px;
+    font-size: 20px;
+    color: var(--color-dark-text);
+    letter-spacing: -0.02em;
+  }
+}

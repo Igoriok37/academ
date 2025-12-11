@@ -1,0 +1,49 @@
+.progress-bar2 {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  margin-bottom: 10px;
+  max-width: 953px;
+  column-gap: 1vw;
+  z-index: 16;
+}
+
+.steps {
+  
+  
+  width: 100%;
+  min-height: 7px;
+  max-height: 11px;
+  
+  border-radius: 51px;
+  background-color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+ 
+}
+
+.steps.active {
+  position: relative;
+  
+  width: 100%;
+  min-height: 7px;
+  max-height: 11px;
+ 
+}
+
+.steps.active::after {
+  position: absolute;
+  content: '';
+
+  width: 100%;
+  min-height: 7px;
+  max-height: 11px;
+  border-radius: 51px;
+  background-image: url(../../images/price/active-item.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+

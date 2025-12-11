@@ -1,0 +1,35 @@
+.button {
+  height: 54px;
+  border-radius: 100px;
+  width: 100%;
+
+  &__overlay{
+    width: 100%;
+    border-radius: var(--border-radius-xxs);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    color: #333;
+    margin-bottom: 78px;
+  }
+
+  &__soc1als {
+    width: 155px;
+    height: 46px;
+    color: var(--color-light);
+    background-color:var(--color-dark-but-bg);
+    border: none;
+    border-radius: var(--border-radius-xxxl);
+    transition: all  .3s ease;
+
+    &:hover {
+      color:  #adb6fe;
+    }
+
+    @include tablet-above {
+      width: 131px;
+      height: 40px;
+    }
+  }
+}

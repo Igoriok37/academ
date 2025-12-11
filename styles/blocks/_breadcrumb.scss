@@ -1,0 +1,26 @@
+.breadcrumb {
+  &__nav {
+    margin-bottom: 24px;
+
+    @include desktop-above {
+      padding-left: 3.4vw;
+    }
+
+    ul {
+      display: flex;
+      column-gap: 8px;
+      align-items: center;
+      line-height: 1.54;
+    }
+
+    li:first-child span {
+      color: #ffffff; /* Стиль для текущего элемента (не ссылки) */
+      opacity: .54;
+    }
+  }
+
+  &__separator  span {
+    display: flex;
+    align-self: center;
+  }
+}

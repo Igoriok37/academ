@@ -1,0 +1,86 @@
+.progress-bar {
+  position: absolute;
+  left: 48%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 407px;
+  max-width: fit-content;
+}
+  .step {
+    width: 130px;
+    height: 130px;
+    background-color:#d9d9d9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+  }
+
+  .step--blue {
+    background-color: var(--color-blue-alt);
+    border: 4px solid #ffffff;
+  }
+
+  
+
+  .scroll-line{
+    /*  background-image: linear-gradient(to bottom, var(--color-blue-alt)0%, var(--color-blue-alt)50%, #d9d9d9 50%, #d9d9d9 100%); */
+ 
+    position: absolute;
+    width: 3px;
+    height: 2555px;
+    background-color:  #d9d9d9;
+    top: 4.5%;
+    left: 49%;
+}
+
+  .scroll-line--blue{
+    /*  background-image: linear-gradient(to bottom, var(--color-blue-alt)0%, var(--color-blue-alt)50%, #d9d9d9 50%, #d9d9d9 100%); */
+    transform-origin: top;
+    position: absolute;
+    width: 3px;
+    height: 407px;
+    background-color: var(--color-blue-alt);
+    top: 4.5%;
+    left: 49%;
+}
+
+#line2 {
+  top: 23.6%;
+}
+#line3 {
+  top: 42.8%;
+}
+#line4 {
+  top: 61.8%;
+}
+#line5 {
+  top: 81%;
+}
+
+
+
+/* Класс, который WOW.js добавит для запуска анимации */
+
+/* Определение ключевых кадров для заполнения линии */
+@keyframes fillColor {
+  0% {
+    background-color:  #d9d9d9;
+    border: none;
+  }
+  100% {
+    background-color: var(--color-blue-alt);
+    border: 4px solid #ffffff;
+  }
+}
+
+@keyframes fillLine {
+  0% {
+    transform: scaleY(0%);
+  }
+  100% {
+    transform: scaleY(100%);
+  }
+}

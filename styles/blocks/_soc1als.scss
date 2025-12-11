@@ -1,0 +1,36 @@
+.soc1als {
+  &__list {
+    display: flex;
+    column-gap: 4px;
+  }
+
+  &__item {
+    @include square(48px);
+    background-color: var(--color-dark-but-bg);
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet-above {
+      @include square(40px);
+        span {
+          display: flex;
+        }
+      } 
+    }
+
+    &__item:hover {
+      svg > path {
+        fill:  #adb6fe;
+        transition: all  .3s ease;
+      }
+    }
+    &__item:hover {
+      svg > g > path {
+        fill:  #adb6fe;
+        transition: all  .3s ease;
+      }
+    }
+  }

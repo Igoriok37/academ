@@ -1,0 +1,35 @@
+.step-content {
+  display: none;
+  /* Скрываем все шаги по умолчанию */
+}
+
+.step-content.active {
+  /* Показываем только активный шаг */
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+
+  @include mobile-above {
+    max-width: 888px;
+    margin: 0 auto;
+    row-gap: 62px;
+    
+  }
+}
+
+.step__appeal {
+  display: flex;
+  column-gap: 10px;
+
+  @include mobile-above {
+    margin: 0 auto;
+  }
+
+  &-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.05em;
+    color: var(--color-blue-alt);
+  }
+}

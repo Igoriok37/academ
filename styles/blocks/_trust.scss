@@ -1,0 +1,241 @@
+.trust {
+  padding: 0;
+  margin-inline: -9px;
+
+
+  @include mobile-above {
+    padding-inline: 23px;
+    
+  }
+    
+
+  &__inner {
+    padding: 3vw 2.5vw 3vw;
+    background-color: var(--color-dark-bg);
+    position: relative;
+    z-index: 0;
+
+    @include mobile-above {
+      border-radius: 18px;
+    }
+
+    @include desktop-above {
+      padding: 8.54vw 13vw 1vw;
+      border-radius: 36px;
+    }
+  }
+
+  &__ellipse-right-image {
+    display: none;
+
+    @include desktop-above {
+      @include square(600px);
+    
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+
+  &__rect-image {
+    display: none;
+
+    @include desktop-above {
+      @include square(552px);
+    
+    display: block;
+    position: absolute;
+    top: 5%;
+    right: 0;
+    z-index: 1;
+    }
+  }
+
+  &__ellipse-left-image {
+      display: none;
+
+    @include desktop-above {
+      @include square(705px);
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    }
+  }
+
+  
+
+  &__title {
+    @include fluid-text(74,30);
+
+    line-height: 1.1;
+    text-align: center;
+    color: #fff;
+    position: sticky; /* Прилипает при прокрутке */
+    top: 30px;
+    z-index: 3;
+    text-shadow: 2px 2px 6px  #080808;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5.83vw;
+    
+
+    @include desktop-above {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &__cards {
+    &-list {
+    position: relative;
+    z-index: 1;
+    @include mobile-above{
+    margin: 0 auto;
+    }
+  }
+
+    &-item {
+      display: flex;
+      max-width: 600px;
+      position: sticky; /* Прилипает при прокрутке */
+      top: 8vw; /* Фиксируется на расстоянии 438px от верха viewport */
+      margin-bottom: 11vw;
+
+      @include mobile-above {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 10px;
+      max-width: 1166px;
+      position: sticky; /* Прилипает при прокрутке */
+      top: 250px; /* Фиксируется на расстоянии 438px от верха viewport */
+      
+      }
+    }
+  }
+
+  &__card {
+    &-left {
+    padding: 2vw 2vw 2vw;
+    background-color: var(--color-light);
+    border-radius: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 50px;
+    min-width: 280px;
+    }
+
+    &-top {
+      display: flex;
+      flex-direction: column;
+      row-gap: 4.16vw;
+    }
+
+    &-number {
+      @include square(54px);
+
+      background-color: var(--color-gray-bg);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    &-title {
+      @include fluid-text(42,18);
+      
+      line-height: 1.1;
+      max-width: 408px;
+    }
+
+    &-desription {
+      @include fluid-text(24,16);
+
+      font-weight: 300;
+      
+      line-height: 1.4;
+      max-width: 436px;
+    }
+
+    &-right {
+      width: 100%;
+
+      @include mobile-above {
+        height: 100%;
+
+        img {
+        border-radius: 36px;
+        min-width: 280px;
+        width: 100%;
+        height: 100%;
+
+
+      }
+    }
+
+    
+  }
+  &-mobile {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 95vw;
+    height: 95vw;
+    border-radius: 28px;
+    padding: 4vw;
+  }
+
+  &-content-mobile {
+    max-width: 50vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6vw;
+    letter-spacing: -0.02em;
+  }
+
+  &-number-mobile {
+    font-size: 2.5vw;
+    font-weight: 700;
+    color: var(--color-light);
+    @include square(7vw);
+
+    background-color: rgba(235, 241, 246, 0.16);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-title-mobile {
+    font-weight: 600;
+    font-size: 6vw;
+    line-height: 1.1;
+    color: #fff;
+  }
+
+  &-desription-mobile {
+    max-width: 50vw;
+    font-weight: 300;
+    font-size: 3vw;
+    line-height: 1.4;
+    
+    color: #fff;
+  }
+}
+
+.trust__cards-item {
+  transform:  scale(1);
+  transition:  2s ease-out, transform 2s ease-out; /* Плавный переход */
+  
+}
+
+.trust__cards-item.is-visible {
+  transform:  scale(.9);
+}
+}

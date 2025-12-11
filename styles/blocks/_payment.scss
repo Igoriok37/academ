@@ -1,0 +1,20 @@
+.payment {
+  @include mobile-above {
+    margin-bottom: 2.2vw;
+  }
+  &-list {
+    display: flex;
+    column-gap: 6px;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-light);
+    
+  }
+}
