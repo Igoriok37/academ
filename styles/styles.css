@@ -2694,7 +2694,7 @@ input[type=range]:hover::-webkit-slider-thumb {
   border: none;
   border-bottom: 1px solid #adb6fe;
   color: #adb6fe;
-  width: 185px;
+  width: 175px;
   height: 40px;
 }
 @media (min-width: 768px) {
