@@ -116,12 +116,6 @@ wow = new WOW({
 })
 wow.init();
 
-// Пример инициализации
-flatpickr("#my-date-picker", {
-  // Ваши опции здесь
-
-  mode: "range"
-});
 
 
 
@@ -264,17 +258,7 @@ updateSliderBackground(originalitySlider, originalityValueDisplay, '%');
 
 
 
-const input = document.querySelector("#phone");
-window.intlTelInput(input, {
-  loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/js/utils.js"),
-  initialCountry: "ru"
-});
 
-const input1 = document.querySelector("#phone1");
-window.intlTelInput(input1, {
-  loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/js/utils.js"),
-  initialCountry: "ru"
-});
 
 document.addEventListener('DOMContentLoaded', () => {
   const uploadArea = document.getElementById('uploadArea');
@@ -498,3 +482,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   AOS.init();
+
